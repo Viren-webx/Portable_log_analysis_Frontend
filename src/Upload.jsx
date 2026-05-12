@@ -79,7 +79,7 @@ export default function Upload() {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("https://portable-log-analysis-backend.onrender.com/analyze", formData);
+      const res = await axios.post("https://portable-log-analysis-backend.onrender.com", formData);
       setResult(res.data);
     } catch {
       setError("Server error");
